@@ -1,0 +1,57 @@
+Sample Input
+
+6
+7 1 3 4 1 7
+
+givvenn an array and find the simmilar pairs and the difference of that pairs position
+then among the two pairs find the minimum difference
+
+Sample Output
+3
+
+//My_Answer--------------------------
+
+import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args){
+
+
+Scanner sc =new Scanner(System.in);
+int n=sc.nextInt();
+int [] arr=new int[n];
+int min=9999;
+for(int i=0;i<n;i++){
+    arr[i]=sc.nextInt();
+}
+
+for(int i=0;i<n;i++){
+    for(int j=i+1;j<n;j++){
+
+        if(arr[i]==arr[j]){
+            //Math.abs(y)
+            if(j-i<min){
+
+                min=j-i;
+
+            }
+        }
+
+    }
+}
+if(min==9999){
+System.out.println(-1);
+}
+else{
+System.out.println(min);
+
+}
+    }
+}
