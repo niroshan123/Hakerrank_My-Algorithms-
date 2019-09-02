@@ -1,0 +1,69 @@
+Sample Input
+
+2
+3 
+1
+2
+4
+10
+100
+Sample Output
+
+2 3 4 
+30 120 210 300 
+
+
+Minus 1 to account for 0 starting stone
+a==b option
+a is our min
+If b was the min then set it to old value of a
+increment by difference because there are only two stones to choose from each time
+
+//My_Answer----------------
+
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        
+        Scanner input = new Scanner(System.in);
+        int x = input.nextInt();
+        
+        for(int i = 0; i < x; i++)
+        {
+            int n = input.nextInt()-1;
+            int a = input.nextInt();
+            int b = input.nextInt();
+            
+            
+            if(a == b)
+            {
+                System.out.println(a*n + " ");
+                continue;
+            }
+            
+          
+            int temp = a;
+            a = Math.min(a,b);
+            b = (a == b) ? temp : b;
+            
+            int min = a*n;
+            int max = b*n;
+            
+            
+            for(int last = min; last <= max; last += (b-a))
+            {
+                System.out.print(last + " ");
+            }
+            
+            System.out.println();
+            
+        }
+    }
+}
+   
+
+
