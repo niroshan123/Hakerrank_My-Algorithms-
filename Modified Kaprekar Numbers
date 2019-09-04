@@ -1,0 +1,54 @@
+
+
+My Solution----
+import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String args[]){
+        Scanner sc=new Scanner(System.in);
+        int first=sc.nextInt();
+        int last=sc.nextInt();
+        long max=0;
+        long min=0;
+        int y=0;
+        int z=0;
+       long arr[]={1,9,45,55,99,297,703,999,2223,2728,4879,4950,5050,5292,7272,7777,9999,17344,22222,38962,77778,82656,95121,99999};
+        
+            for(int k=0;k<24;k++){
+                if(arr[k]<=last){
+                    if(arr[k]>max){
+                    max=arr[k];
+                     z=k;
+                    }
+                }
+                }
+                for(int k=0;k<24;k++){
+                 if(arr[k]>=first){
+                    
+                    
+                     y=k;
+                     break;
+                    }
+                }
+                
+                for(int n=y;n<=z;n++){
+                System.out.print(arr[n]+" ");
+                }
+                }
+                // else{
+                //     System.out.println("Invalid");
+                // }
+            
+            
+                
+            
+        
+    }
+
