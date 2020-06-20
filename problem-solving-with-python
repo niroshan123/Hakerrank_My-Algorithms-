@@ -32,3 +32,36 @@ arr = list(map(int,input().split(' ')))
 print(sum(arr))
 
 ################################
+
+
+Now, let's compare each individual score:
+
+, so Alice receives  point.
+, so nobody receives a point.
+, so Bob receives  point.
+Alice's comparison score is , and Bob's comparison score is . Thus, we return the array .
+
+Sample Input 1
+
+17 28 30
+99 16 8
+Sample Output 1
+
+2 1
+
+a = list(map(int, input().split(' ')))
+b = list(map(int, input().split(' ')))
+
+a_score = b_score = 0
+
+for i in range(len(a)):
+    if a[i] > b[i]:
+        a_score += 1
+    elif a[i] < b[i]:
+        b_score +=1
+    else:
+        pass
+
+print(a_score, b_score)
+
+################################
